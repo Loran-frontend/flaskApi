@@ -5,11 +5,11 @@ from flask import Flask, request
 app = Flask(__name__)
 
 conn = psycopg2.connect(
-    host=os.environ["PGHOST"],
-    user=os.environ["PGUSER"],
-    password=os.environ["PGPASSWORD"],
-    dbname=os.environ["PGDATABASE"],
-    port=os.environ["PGPORT"]
+    host="postgres.railway.internal",
+    user="postgres",
+    password="MMFkuYbxbnytTTTJERqNpGPlaSinIzwz",
+    dbname="railway",
+    port=5432
 )
 
 @app.route("/add_code", methods=["POST"])
